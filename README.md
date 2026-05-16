@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shotfolio
+
+Shotfolio is a premium portfolio cover generator for developers. Upload a website screenshot, choose a refined cover style, sync the visual palette from the screenshot, preview the composition live, and export a high-quality PNG for your portfolio, README, LinkedIn, Behance, or Dribbble.
+
+## Features
+
+- Screenshot upload with instant live preview
+- Automatic color palette extraction from uploaded screenshots
+- Premium browser, floating card, minimal, and MacBook-style mockups
+- Export presets for portfolio covers, GitHub README images, LinkedIn squares, Behance covers, and Dribbble shots
+- Responsive landing page and generator experience
+- High-quality PNG export with `html-to-image`
+- Temporary editor data stored in React state and `localStorage`
+- No database, no authentication, and no paid external APIs
+
+## Tech Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn-style UI primitives
+- Framer Motion
+- Lucide React
+- html-to-image
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev
+npm run lint
+npm run build
+npm run start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```txt
+src/app
+  page.tsx
+  generator/page.tsx
+src/components
+  navbar.tsx
+  hero.tsx
+  features.tsx
+  template-gallery.tsx
+  generator/*
+  ui/*
+src/lib
+  constants.ts
+  export-image.ts
+  extract-colors.ts
+  templates.ts
+src/types
+  index.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Shotfolio is built with Next.js and is ready to deploy on Vercel.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Created for developers who care about presentation.
